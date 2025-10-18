@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Diagonale Configurable</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Écran 1: Noir avec logo blanc -->
+    <div class="screen screen-1">
+        <img src="assets/images/logo2white.png" alt="Logo Blanc" class="logo">
+    </div>
+    
+    <!-- Écran 2: Blanc avec logo noir -->
+    <div class="screen screen-2">
+        <img src="assets/images/logo2.png" alt="Logo Noir" class="logo">
+    </div>
+    
+    <!-- Panneau de configuration (caché, appuyez sur 'c' pour afficher) -->
+    <div id="config-panel">
+        <h3>Configuration</h3>
+        <label>Durée totale (ms): <input type="number" id="total-duration" value="6000"></label>
+        <label>Délai initial (ms): <input type="number" id="initial-delay" value="800"></label>
+        <label>Délai max (ms): <input type="number" id="max-delay" value="800"></label>
+        <label>Délai min (ms): <input type="number" id="min-delay" value="50"></label>
+        <label>Durée transition (ms): <input type="number" id="transition-duration" value="800"></label>
+        <label>
+            Courbe d'accélération:
+            <select id="acceleration-curve">
+                <option value="linear">Linéaire</option>
+                <option value="quadratic" selected>Quadratique (Progress²)</option>
+                <option value="cubic">Cubique (Progress³)</option>
+                <option value="exponential">Exponentielle</option>
+                <option value="bounce">Rebond</option>
+            </select>
+        </label>
+        <button id="apply-config">Appliquer</button>
+        <button id="restart">Redémarrer</button>
+    </div>
+    
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/transitions.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
